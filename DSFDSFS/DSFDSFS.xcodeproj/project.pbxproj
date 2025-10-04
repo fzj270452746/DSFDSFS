@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		02218978966576BA6748A2ED /* Pods_DSFDSFS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F69D5331D9507D3F7BA331F /* Pods_DSFDSFS.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		0F69D5331D9507D3F7BA331F /* Pods_DSFDSFS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSFDSFS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D43ADA2E90CB7400D0AFE8 /* DSFDSFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSFDSFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		303BCFDC28FE66DA78E74B17 /* Pods-DSFDSFS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSFDSFS.debug.xcconfig"; path = "Target Support Files/Pods-DSFDSFS/Pods-DSFDSFS.debug.xcconfig"; sourceTree = "<group>"; };
+		BCE54B385A7A83E5BA953CA3 /* Pods-DSFDSFS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSFDSFS.release.xcconfig"; path = "Target Support Files/Pods-DSFDSFS/Pods-DSFDSFS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02218978966576BA6748A2ED /* Pods_DSFDSFS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24E3A837A51A07EC3B21B0E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F69D5331D9507D3F7BA331F /* Pods_DSFDSFS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		28D43AD12E90CB7400D0AFE8 = {
 			isa = PBXGroup;
 			children = (
 				28D43ADC2E90CB7400D0AFE8 /* DSFDSFS */,
 				28D43ADB2E90CB7400D0AFE8 /* Products */,
+				8A982C33B30807D8B4698564 /* Pods */,
+				24E3A837A51A07EC3B21B0E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8A982C33B30807D8B4698564 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				303BCFDC28FE66DA78E74B17 /* Pods-DSFDSFS.debug.xcconfig */,
+				BCE54B385A7A83E5BA953CA3 /* Pods-DSFDSFS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,6 +93,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28D43AED2E90CB7600D0AFE8 /* Build configuration list for PBXNativeTarget "DSFDSFS" */;
 			buildPhases = (
+				E3A17BEB93DC104B72E83B5C /* [CP] Check Pods Manifest.lock */,
 				28D43AD62E90CB7400D0AFE8 /* Sources */,
 				28D43AD72E90CB7400D0AFE8 /* Frameworks */,
 				28D43AD82E90CB7400D0AFE8 /* Resources */,
@@ -77,8 +106,6 @@
 				28D43ADC2E90CB7400D0AFE8 /* DSFDSFS */,
 			);
 			name = DSFDSFS;
-			packageProductDependencies = (
-			);
 			productName = DSFDSFS;
 			productReference = 28D43ADA2E90CB7400D0AFE8 /* DSFDSFS.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E3A17BEB93DC104B72E83B5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DSFDSFS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28D43AD62E90CB7400D0AFE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +192,7 @@
 /* Begin XCBuildConfiguration section */
 		28D43AEE2E90CB7600D0AFE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 303BCFDC28FE66DA78E74B17 /* Pods-DSFDSFS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -172,6 +225,7 @@
 		};
 		28D43AEF2E90CB7600D0AFE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE54B385A7A83E5BA953CA3 /* Pods-DSFDSFS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

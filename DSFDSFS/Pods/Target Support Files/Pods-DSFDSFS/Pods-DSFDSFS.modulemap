@@ -1,0 +1,6 @@
+framework module Pods_DSFDSFS {
+  umbrella header "Pods-DSFDSFS-umbrella.h"
+
+  export *
+  module * { export * }
+}
